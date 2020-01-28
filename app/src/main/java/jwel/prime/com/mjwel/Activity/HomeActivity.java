@@ -35,6 +35,7 @@ import jwel.prime.com.mjwel.Fragments.BaseHomeFragment;
 import jwel.prime.com.mjwel.Fragments.BestOfferFragment;
 import jwel.prime.com.mjwel.Fragments.FragmentLauncher;
 import jwel.prime.com.mjwel.Fragments.HomeFragment;
+import jwel.prime.com.mjwel.Fragments.WishlistFragment;
 import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
 
@@ -126,9 +127,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new HomeFragment(), false, true);
                 break;
             case R.id.nav_best_offer :
-                FragmentLauncher.launchFragment(this, R.id.homeFrame, new BestOfferFragment(), true, false);
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new BestOfferFragment(), false, true);
             break;
             case R.id.nav_wishlist:
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new WishlistFragment(), false, true);
                 break;
             case R.id.nav_cart:
                 break;
