@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.CountryAuthFragment">
+    <ImageView
+        android:id="@+id/auth_country_app_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:transitionName="app_logo"
+        android:scaleType="center"
+        android:src="@drawable/auth_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/auth_country_select_country_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/opensanssemibold"
+        android:gravity="center_horizontal"
+        android:text="@string/select_your_country"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_country_app_logo" />
+
+    <TextView
+        android:id="@+id/auth_country_select_country_tagline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/opensansregular"
+        android:gravity="center_horizontal"
+        android:text="@string/products_will_appear_on_the_basis_of_country"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_country_select_country_text" />
+
+    <LinearLayout
+        android:id="@+id/auth_select_country_layout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/spinner_white_background"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_country_select_country_tagline"
+        android:paddingStart="12dp">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/auth_select_country"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:entries="@array/country_array" />
+
+        <ImageView
+            android:id="@+id/auth_select_country_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:scaleType="centerInside"
+            android:src="@drawable/flag_of_india"
+            android:contentDescription="@string/country_flag" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/auth_select_state_layout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="12dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/spinner_white_background"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_select_country_layout">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/auth_select_state"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:entries="@array/state_array"
+            android:layout_weight="8" />
+        <ImageView
+            android:id="@+id/auth_select_state_image"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:src="@drawable/tick"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/tick_button" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/auth_select"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_gradient_authentication"
+        android:text="@string/select"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="@font/opensansregular"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/auth_select_state_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

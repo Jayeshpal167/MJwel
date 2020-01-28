@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="80dp"
+    android:id="@+id/category_layout"
+    android:background="@drawable/category_default"
+    android:layout_height="80dp"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    >
+
+    <ImageView
+        android:id="@+id/category_image"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/category_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensanssemibold"
+        android:text=""
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeMinTextSize="8sp"
+        android:singleLine="true"
+        android:autoSizeMaxTextSize="16sp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:textSize="16sp"
+        android:textColor="@color/category_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

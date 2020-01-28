@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/videos"
+            android:title="@string/videos" />
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/chats"
+            android:title="@string/chats" />
+        <item
+            android:id="@+id/nav_new_and_updates"
+            android:icon="@drawable/new_and_updates"
+            android:title="@string/news_and_updates" />
+        <item
+            android:id="@+id/nav_my_wallet"
+            android:icon="@drawable/my_wallet"
+            android:title="@string/my_wallet" />
+        <item
+            android:id="@+id/nav_my_requirements"
+            android:icon="@drawable/requirements"
+            android:title="@string/my_requirements" />
+        <item
+            android:id="@+id/nav_my_leads"
+            android:icon="@drawable/my_leads"
+            android:title="@string/my_leads" />
+        <item
+            android:id="@+id/nav_my_enquiry"
+            android:icon="@drawable/my_enquiry"
+            android:title="@string/my_enquiry" />
+        <item
+            android:id="@+id/nav_account_setting"
+            android:icon="@drawable/account_setting"
+            android:title="@string/account_setting" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/faqs"
+            android:title="@string/faqs" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/feedback"
+            android:title="@string/feedbacks" />
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/contact_us"
+            android:title="@string/contact_us_91_8888888888" />
+        <item
+            android:id="@+id/nav_tnc"
+            android:icon="@drawable/t_n_c"
+            android:title="@string/terms_and_conditions" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/about_us"
+            android:title="@string/about_us" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/logout" />
+    </group>
+</menu>

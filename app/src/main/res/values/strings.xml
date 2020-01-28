@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">MJwel</string>
+    <string name="videos">Videos</string>
+    <string name="chats">Chats</string>
+    <string name="news_and_updates">News and Updates</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="my_requirements">My Requirements</string>
+    <string name="my_leads">My Leads</string>
+    <string name="my_enquiry">My Enquiry</string>
+    <string name="account_setting">Account Setting</string>
+    <string name="faqs">FAQs</string>
+    <string name="feedbacks">Feedbacks</string>
+    <string name="contact_us_91_8888888888">Contact Us: +91-8888888888</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="followers">Followers:</string>
+    <string name="followings">Followings:</string>
+    <string name="shubham_kumar">Shubham Kumar</string>
+    <string name="dra_my_wallet">My Wallet: ₹</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="search">Search</string>
+    <string name="best_seller">Best seller</string>
+    <string name="more">More</string>
+    <string name="product_image">product image</string>
+    <string name="name_of_jewellery">Name of Jewellery</string>
+    <string name="product_name">Product Name</string>
+    <string name="_3_0">3.0 Ratings</string>
+    <string name="add">ADD</string>
+    <string name="sample_text">lorem ispum Lroena asjdbao asjdakdba aoibdaiobda ooadsboasidas oabdoasbdoa abdoadonasbda oadbaodasdaod oabdpadpabdao</string>
+    <string name="enjoy_shopping">Enjoy Shopping</string>
+    <string name="tagline_splash">Explore a ton of products and\nfind a suitable one</string>
+    <string name="select_your_country">Select Your Country</string>
+    <string name="products_will_appear_on_the_basis_of_country">Products will appear on the basis of country</string>
+    <string name="country_flag">Country Flag</string>
+    <string name="tick_button">tick_button</string>
+    <string name="select">Select</string>
+    <string name="auth_logo">auth_logo</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="auth_reg">Registration</string>
+    <string name="enter_your_mobile_number_we_will_send_you_otp_to_verify">Enter your mobile number, we will send you OTP to verify</string>
+    <string name="_91">(+91)</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="already_have_account">Already Have Account</string>
+    <string name="login">Login</string>
+    <string name="skip_authentication">Skip Authentication</string>
+    <string name="forgot_password_send_otp">Forgot Password??? SEND OTP</string>
+    <string name="password">Password</string>
+    <string name="new_registration">New Registration</string>
+    <string name="skip_this_step">Skip this step</string>
+    <string name="verify_mobile_number">Verify Mobile Number</string>
+    <string name="we_have_sent_the_otp_on_91_xxxxxxxxxx">We have sent the OTP on +91 XXXXXXXXXX</string>
+    <string name="x">X</string>
+    <string name="verify">Verify</string>
+    <string name="asdas_home">Home</string>
+    <string name="account">Account</string>
+    <string name="cart">Cart</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="best_offer">Best Offer</string>
+    <string name="best_of_offers">Best of Offers</string>
+    <string name="exchange_old_gold">Exchange Old Gold</string>
+    <string name="terms_and_conditions_applied">Terms and Conditions applied</string>
+    <string name="valid_till_25th_jan">Valid till 25th Jan</string>
+    <string name="give_a_special_gift_to_your_loved_one_on_special_price">Give a special gift to your loved one on special price</string>
+    <string name="on_white_gold_necklace">On White gold necklace</string>
+    <string name="my_wishlist">My Wishlist</string>
+    <string name="product_name">Product Name</string>
+    <string-array name="country_array">
+        <item>India</item>
+        <item>China</item>
+        <item>Japan</item>
+        <item>Korea</item>
+        <item>United Kingdom</item>
+        <item>United State</item>
+    </string-array>
+    <string-array name="country_code_array">
+        <item>(+91)</item>
+        <item>(+92)</item>
+        <item>(+93)</item>
+        <item>(+94)</item>
+        <item>(+95)</item>
+        <item>(+96)</item>
+    </string-array>
+    <string-array name="state_array">
+        <item>Delhi</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttrakhand</item>
+        <item>Madhya Pradesh</item>
+        <item>Haryana</item>
+        <item>Rajasthan</item>
+    </string-array>
+</resources>
