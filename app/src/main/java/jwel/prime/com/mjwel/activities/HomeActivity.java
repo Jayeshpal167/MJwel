@@ -73,6 +73,12 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    public void closeNavigationDrawer() {
+        toggle.setDrawerIndicatorEnabled(true);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+    }
+
     public void showBackButton() {
         findViewById(R.id.backButtonToolbar).setVisibility(View.VISIBLE);
     }
@@ -93,9 +99,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onClick(View v) {
-        BaseHomeFragment fragment = getCurrentFragment();
-        if (null != fragment) {
-            fragment.onClick(v);
+        if (v.getId() == R.id.navigation_header_container) {
+            closeNavigationDrawer();
+            FragmentLauncher.launchFragment(this, R.id.homeFrame, new ProfileFragment(), false, true);
+        } else {
+            BaseHomeFragment fragment = getCurrentFragment();
+            if (null != fragment) {
+                fragment.onClick(v);
+            }
         }
     }
 

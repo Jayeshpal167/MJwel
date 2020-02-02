@@ -2,10 +2,6 @@ package jwel.prime.com.mjwel.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,15 +11,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-
+import androidx.core.content.ContextCompat;
 import com.google.android.material.snackbar.Snackbar;
-
 import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProfileFragment extends BaseHomeFragment {
 
     public ProfileFragment() {
@@ -48,7 +40,8 @@ public class ProfileFragment extends BaseHomeFragment {
     private EditText profileState;
     private EditText profilePincode;
     private Spinner profileEditBusinessType;
-    private CheckBox porfileExporter, profileAcceptTnc;
+    private CheckBox porfileExporter;
+    private CheckBox profileAcceptTnc;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -75,8 +68,13 @@ public class ProfileFragment extends BaseHomeFragment {
         profileAcceptTnc = contentView.findViewById(R.id.profile_i_accept);
         //to set the current profile value at above header
         setProfileOfUser("Shubham Kumar", "9458XXXXXX");
-        ToolBarManagerHome.getInstance().changeToolBarColor(ContextCompat.getColor(mActivity, R.color.profileToolBarTopColor));
         return contentView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        ToolBarManagerHome.getInstance().changeToolBarColor(ContextCompat.getColor(mActivity, R.color.profileToolBarTopColor));
     }
 
     @SuppressLint("SetTextI18n")
@@ -109,5 +107,11 @@ public class ProfileFragment extends BaseHomeFragment {
         mActivity.enableDrawer(true);
         mActivity.hideBackButton();
         ToolBarManagerHome.getInstance().setHeaderTitle("");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        ToolBarManagerHome.getInstance().changeToolBarColor(ContextCompat.getColor(mActivity, R.color.white));
     }
 }

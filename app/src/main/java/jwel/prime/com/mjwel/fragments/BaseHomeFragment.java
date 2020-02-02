@@ -37,7 +37,9 @@ public class BaseHomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-
+        /*
+        *
+        * */
     }
     public void onBackPressed(BaseHomeFragment fragment) {
         if (fragment != null && fragment.getActivity() != null) {
