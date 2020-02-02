@@ -3,27 +3,20 @@ package jwel.prime.com.mjwel.activities;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import android.view.MenuItem;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.core.view.GravityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import java.util.List;
-
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
+import jwel.prime.com.mjwel.R;
+import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
 import jwel.prime.com.mjwel.fragments.AboutUsFragment;
 import jwel.prime.com.mjwel.fragments.BaseHomeFragment;
 import jwel.prime.com.mjwel.fragments.BestOfferFragment;
@@ -34,13 +27,14 @@ import jwel.prime.com.mjwel.fragments.NewsAndUpdatesFragment;
 import jwel.prime.com.mjwel.fragments.ProfileFragment;
 import jwel.prime.com.mjwel.fragments.TermsAndConditionsFragment;
 import jwel.prime.com.mjwel.fragments.WishlistFragment;
-import jwel.prime.com.mjwel.R;
-import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private ActionBarDrawerToggle toggle;
     BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,27 +42,25 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbarLayout);
         findViewById(R.id.backButtonToolbar).setVisibility(View.GONE);
         setSupportActionBar(toolbar);
-//        toolbar.setNavigationIcon(R.drawable.navigation_icon);
         ToolBarManagerHome.getInstance().setupToolbar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
-        getSupportActionBar().setTitle("");
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.navigation_icon);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.navigation_icon);
+        }
         toggle.syncState();
-        //toggle.setHomeAsUpIndicator(R.drawable.navigation_icon);
         bottomNavigationView = findViewById(R.id.app_bottomLayout);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         navigationView.setNavigationItemSelectedListener(this);
         FragmentLauncher.launchFragment(this, R.id.homeFrame, new HomeFragment(), false, true);
     }
-//    public void enableBottomNavigation(int Id){
-//        bottomNavigationView.setSelectedItemId(Id);
-//    }
+
     public void enableDrawer(boolean isEnable) {
         toggle.setDrawerIndicatorEnabled(isEnable);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -80,9 +72,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             findViewById(R.id.appIconImageView).setVisibility(View.VISIBLE);
         }
     }
-    public void showBackButton(){
+
+    public void showBackButton() {
         findViewById(R.id.backButtonToolbar).setVisibility(View.VISIBLE);
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -96,10 +90,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             }
         }
     }
+
     @Override
     public void onClick(View v) {
         BaseHomeFragment fragment = getCurrentFragment();
-        if(null != fragment){
+        if (null != fragment) {
             fragment.onClick(v);
         }
     }
@@ -124,13 +119,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch(menuItem.getItemId()){
-            case R.id.nav_home :
+        switch (menuItem.getItemId()) {
+            case R.id.nav_home:
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new HomeFragment(), false, true);
                 break;
-            case R.id.nav_best_offer :
+            case R.id.nav_best_offer:
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new BestOfferFragment(), false, true);
-            break;
+                break;
             case R.id.nav_wishlist:
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new WishlistFragment(), false, true);
                 break;
@@ -152,6 +147,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Intent gotoAuthentication = new Intent(HomeActivity.this, Authentication.class);
                 startActivity(gotoAuthentication);
                 finish();
+                break;
             case R.id.nav_about_us:
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new AboutUsFragment(), true, false);
                 break;
@@ -159,7 +155,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new TermsAndConditionsFragment(), true, false);
                 break;
             default:
-                    break;
+                break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -168,10 +164,5 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     public void hideBackButton() {
         findViewById(R.id.backButtonToolbar).setVisibility(View.GONE);
-    }
-
-    @Override
-    public void onPointerCaptureChanged(boolean hasCapture) {
-
     }
 }

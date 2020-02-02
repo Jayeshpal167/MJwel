@@ -5,20 +5,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
-
+import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.activities.HomeActivity;
 import jwel.prime.com.mjwel.fragments.FragmentLauncher;
 import jwel.prime.com.mjwel.fragments.ProductDetailFragment;
-import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.model.Products;
 
+import java.util.List;
+
 public class HomeProductsAdapter extends RecyclerView.Adapter<HomeProductsAdapter.HomeProductsViewHolder> {
+
     private List<Products> productList;
     private HomeActivity activity;
 
@@ -53,11 +52,15 @@ public class HomeProductsAdapter extends RecyclerView.Adapter<HomeProductsAdapte
         return productList.size();
     }
 
-    public class HomeProductsViewHolder extends RecyclerView.ViewHolder {
-        private TextView productName, productRating, productPrice;
+    class HomeProductsViewHolder extends RecyclerView.ViewHolder {
+
+        private TextView productName;
+        private TextView productRating;
+        private TextView productPrice;
         private ImageView productImage;
         private CardView productCard;
-        public HomeProductsViewHolder(@NonNull View itemView) {
+
+        HomeProductsViewHolder(@NonNull View itemView) {
             super(itemView);
             productCard = itemView.findViewById(R.id.productCard);
             productImage = itemView.findViewById(R.id.home_product_image);
