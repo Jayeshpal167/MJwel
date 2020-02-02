@@ -2,19 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/active_dot"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp" />
     <TextView
         android:id="@+id/point_string"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/mjwel_is_india_s_leading_zero_fee_online_b2b_b2c_o2o_jewellery_market_place_bringing_together_manufacture_whole_seller_retailers_and_supporting_them_to_sell_their_product_globally"
         android:textSize="16sp"
+        android:drawableLeft="@drawable/active_dot"
+        android:drawablePadding="5dp"
+        android:drawableStart="@drawable/active_dot"
         android:textColor="@color/black"
         android:fontFamily="@font/opensanssemibold"
  />

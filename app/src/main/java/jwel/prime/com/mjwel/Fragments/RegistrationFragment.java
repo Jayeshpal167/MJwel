@@ -46,6 +46,7 @@ public class RegistrationFragment extends BaseAuthenticationFragment {
         skipThisStep = contentView.findViewById(R.id.auth_skip_to_main);
         skipThisStep.setOnClickListener(this);
         sendOtp.setOnClickListener(this);
+        sendOtp.setVisibility(View.GONE);
         mobileNumber = contentView.findViewById(R.id.auth_registration_mobile_number);
         mobileNumber.addTextChangedListener(new TextWatcher() {
             @Override

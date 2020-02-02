@@ -41,6 +41,7 @@ import jwel.prime.com.mjwel.Fragments.FragmentLauncher;
 import jwel.prime.com.mjwel.Fragments.HomeFragment;
 import jwel.prime.com.mjwel.Fragments.NewsAndUpdatesFragment;
 import jwel.prime.com.mjwel.Fragments.ProfileFragment;
+import jwel.prime.com.mjwel.Fragments.TermsAndConditionsFragment;
 import jwel.prime.com.mjwel.Fragments.WishlistFragment;
 import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
@@ -162,6 +163,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 finish();
             case R.id.nav_about_us:
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new AboutUsFragment(), true, false);
+                break;
+            case R.id.nav_tnc:
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new TermsAndConditionsFragment(), true, false);
                 break;
             default:
                     break;
