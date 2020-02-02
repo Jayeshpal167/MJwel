@@ -8,7 +8,7 @@
     android:paddingRight="16dp"
     android:background="@color/white"
     android:paddingBottom="16dp"
-    tools:context=".Fragments.NewsAndUpdatesFragment">
+    tools:context=".fragments.NewsAndUpdatesFragment">
     <TextView
         android:id="@+id/news_title"
         android:layout_width="0dp"

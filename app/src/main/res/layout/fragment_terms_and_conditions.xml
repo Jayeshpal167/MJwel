@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".Fragments.TermsAndConditionsFragment">
+    tools:context=".fragments.TermsAndConditionsFragment">
     <TextView
             android:id="@+id/tnc_title"
             android:layout_width="0dp"

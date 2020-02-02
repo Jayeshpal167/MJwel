@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".Fragments.AboutUsFragment">
+    tools:context=".fragments.AboutUsFragment">
     <TextView
             android:id="@+id/about_us_title"
             android:layout_width="0dp"
