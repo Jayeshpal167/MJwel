@@ -5,9 +5,9 @@
     android:id="@+id/productCard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/gap_small_v2"
     android:background="@color/white"
-    android:layout_gravity="center_horizontal"
     android:elevation="8dp"
     android:orientation="vertical"
     app:cardCornerRadius="10dp"
@@ -17,17 +17,24 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
+        android:orientation="vertical"
         android:padding="8dp">
 
-        <ImageView
-            android:id="@+id/home_product_image"
-            android:layout_width="223dp"
-            android:layout_height="223dp"
-            android:contentDescription="@string/product_image"
-            android:scaleType="fitCenter"
-            android:src="@drawable/necklac_dummy" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/home_product_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/product_image"
+                android:scaleType="fitCenter"
+                android:src="@drawable/necklac_dummy" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +42,8 @@
             android:layout_marginHorizontal="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:targetApi="o">
 
             <TextView
                 android:id="@+id/home_product_rating"
@@ -57,7 +65,7 @@
                 android:layout_weight="1"
                 android:drawablePadding="5dp"
                 android:fontFamily="@font/opensansregular"
-                android:gravity="right"
+                android:gravity="end"
                 android:text="₹ 12000"
                 android:textColor="@color/category_text"
                 android:textSize="16sp" />

@@ -13,4 +13,77 @@
     <dimen name="product_image_xxlarge">250dp</dimen>
     <dimen name="product_image_xxxlarge">250dp</dimen>
 
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="margin_bottom_btn">35dp</dimen>
+    <dimen name="margin_bottom_logo">50dp</dimen>
+    <dimen name="pad_edit_start">20dp</dimen>
+    <dimen name="minHeightEditText">45dp</dimen>
+    <dimen name="page_top_height">170dp</dimen>
+    <dimen name="fab_size">50dp</dimen>
+    <dimen name="height_small_header">100dp</dimen>
+    <dimen name="size_icon_default">30dp</dimen>
+    <dimen name="wallet_button_size">45dp</dimen>
+    <dimen name="wallet_display_height">60dp</dimen>
+    <dimen name="fingerprint_height">80dp</dimen>
+    <dimen name="power_light_diameter">10dp</dimen>
+
+    <!--TEXT SIZE-->
+    <dimen name="extra_large_text">25sp</dimen>
+    <dimen name="vv_large_text">22sp</dimen>
+    <dimen name="v_large_v2_text">20sp</dimen>
+    <dimen name="v_large_text">18sp</dimen>
+    <dimen name="v_large_text1">17sp</dimen>
+    <dimen name="large_text">16sp</dimen>
+    <dimen name="medium_text">15sp</dimen>
+    <dimen name="normal_text">14sp</dimen>
+    <dimen name="normal_text_1">13sp</dimen>
+    <dimen name="small_text">12sp</dimen>
+    <dimen name="v_small_text">10sp</dimen>
+    <dimen name="vv_small_text">9sp</dimen>
+    <dimen name="x_small_text">7sp</dimen>
+    <dimen name="font_size_paying">60sp</dimen>
+    <dimen name="font_size_money">50sp</dimen>
+
+
+    <!--GAP SIZE-->
+    <dimen name="gap_vvlarge_v2">30dp</dimen>
+    <dimen name="gap_vlarge_v2">25dp</dimen>
+    <dimen name="gap_large_v2">20dp</dimen>
+    <dimen name="gap_mlarge_v2">18dp</dimen>
+    <dimen name="gap_medium_v2">15dp</dimen>
+    <dimen name="gap_small_v2">10dp</dimen>
+    <dimen name="gap_msmall_v2">7dp</dimen>
+    <dimen name="gap_msmall_v3">8dp</dimen>
+    <dimen name="gap_small_nine">9dp</dimen>
+    <dimen name="gap_v_small_v2">5dp</dimen>
+    <dimen name="gap_vv_small_v2">2dp</dimen>
+    <dimen name="gap_negligible">0.8dp</dimen>
+    <dimen name="gap_separation">0.4dp</dimen>
+
+    <!--PADDING SIZE-->
+    <dimen name="pad_vv_small_v2">2dp</dimen>
+    <dimen name="pad_v_small_v2">5dp</dimen>
+    <dimen name="pad_small_v2">12dp</dimen>
+    <dimen name="pad_medium_v2">45dp</dimen>
+    <dimen name="pad_large_v1">25dp</dimen>
+    <dimen name="pad_large_v2">30dp</dimen>
+    <dimen name="pad_v_large_v2">40dp</dimen>
+    <dimen name="pad_vv_large_v2">50dp</dimen>
+    <dimen name="height_logo">60dp</dimen>
+    <dimen name="gap_fixed">14dp</dimen>
+
+    <dimen name="width_qr_v2">120dp</dimen>
+    <dimen name="offline_card_height">220dp</dimen>
+    <dimen name="dialog_height">400dp</dimen>
+    <dimen name="regular_btn_min_width">100dp</dimen>
+
+    <dimen name="elevation_val">4dp</dimen>
+    <dimen name="border_width">5dp</dimen>
+    <dimen name="border_width_small">3dp</dimen>
+
+    <dimen name="pin_content_layout_padding">40dp</dimen>
+    <dimen name="pin_label_margin">10dp</dimen>
+    <dimen name="pin_min_width">32dp</dimen>
+
 </resources>

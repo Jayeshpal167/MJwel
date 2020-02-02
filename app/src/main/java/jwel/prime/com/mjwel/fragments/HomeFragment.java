@@ -66,7 +66,6 @@ public class HomeFragment extends BaseHomeFragment {
         saleRecycler.setAdapter(new SaleOptionAdapter(mActivity, saleList));
         categoryRecycler.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         categoryRecycler.setAdapter(new CategoryAdapter(mActivity, categoryArrayList));
-        //adding the temopray product
         Products products = new Products(1, "Red Stone Necklace", "link", "3.0", "₹ 12000");
         List<Products> productsList = new ArrayList<>();
         productsList.add(products);
