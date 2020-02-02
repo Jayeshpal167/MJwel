@@ -1,5 +1,7 @@
 package jwel.prime.com.mjwel.Activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -31,10 +33,14 @@ import android.view.Menu;
 
 import java.util.List;
 
+import jwel.prime.com.mjwel.Fragments.AboutUsFragment;
 import jwel.prime.com.mjwel.Fragments.BaseHomeFragment;
 import jwel.prime.com.mjwel.Fragments.BestOfferFragment;
+import jwel.prime.com.mjwel.Fragments.CartFragment;
 import jwel.prime.com.mjwel.Fragments.FragmentLauncher;
 import jwel.prime.com.mjwel.Fragments.HomeFragment;
+import jwel.prime.com.mjwel.Fragments.NewsAndUpdatesFragment;
+import jwel.prime.com.mjwel.Fragments.ProfileFragment;
 import jwel.prime.com.mjwel.Fragments.WishlistFragment;
 import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
@@ -57,6 +63,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
+        getSupportActionBar().setTitle("");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.navigation_icon);
         toggle.syncState();
         //toggle.setHomeAsUpIndicator(R.drawable.navigation_icon);
         bottomNavigationView = findViewById(R.id.app_bottomLayout);
@@ -133,12 +143,31 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 FragmentLauncher.launchFragment(this, R.id.homeFrame, new WishlistFragment(), false, true);
                 break;
             case R.id.nav_cart:
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new CartFragment(), false, true);
                 break;
             case R.id.nav_account_setting:
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new ProfileFragment(), false, true);
+                break;
+            case R.id.nav_new_and_updates:
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new NewsAndUpdatesFragment(), true, false);
+                break;
+            case R.id.nav_contact_us:
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:+919458749970"));
+                startActivity(intent);
+                break;
+            case R.id.nav_logout:
+                Intent gotoAuthentication = new Intent(HomeActivity.this, Authentication.class);
+                startActivity(gotoAuthentication);
+                finish();
+            case R.id.nav_about_us:
+                FragmentLauncher.launchFragment(this, R.id.homeFrame, new AboutUsFragment(), true, false);
                 break;
             default:
                     break;
         }
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 

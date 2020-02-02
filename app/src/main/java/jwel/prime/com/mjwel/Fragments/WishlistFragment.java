@@ -20,6 +20,7 @@ import java.util.List;
 
 import jwel.prime.com.mjwel.Adapters.WishlistAdapter;
 import jwel.prime.com.mjwel.R;
+import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
 import jwel.prime.com.mjwel.model.Products;
 
 /**
@@ -62,5 +63,12 @@ public class WishlistFragment extends BaseHomeFragment {
                 doubleBackPress = false;
             }
         }, 1500);
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mActivity.enableDrawer(true);
+        mActivity.hideBackButton();
+        ToolBarManagerHome.getInstance().setHeaderTitle("");
     }
 }

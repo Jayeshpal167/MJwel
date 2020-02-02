@@ -10,7 +10,7 @@
     <string name="account_setting">Account Setting</string>
     <string name="faqs">FAQs</string>
     <string name="feedbacks">Feedbacks</string>
-    <string name="contact_us_91_8888888888">Contact Us: +91-8888888888</string>
+    <string name="contact_us_91_8888888888">Contact Us: +91–8888888888</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
     <string name="about_us">About Us</string>
     <string name="logout">Logout</string>
@@ -73,6 +73,40 @@
     <string name="give_a_special_gift_to_your_loved_one_on_special_price">Give a special gift to your loved one on special price</string>
     <string name="on_white_gold_necklace">On White gold necklace</string>
     <string name="my_wishlist">My Wishlist</string>
+    <string name="my_cart_title">My Cart</string>
+    <string name="bank_offer_5_instant_discount_with_hsbc_cashback_card">Bank Offer : 5% Instant discount with HSBC Cashback Card.</string>
+    <string name="payable_amount">Payable Amount</string>
+    <string name="proceed_to_buy">Proceed to Buy</string>
+    <string name="discount">Discount</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="total_mrp_including_of_all_taxes">Total MRP (Including of all taxes)</string>
+    <string name="shipping_charge">Shipping Charge</string>
+    <string name="final_amount">Final Amount</string>
+    <string name="my_account">My Account</string>
+    <string name="business_information">Business Information:</string>
+    <string name="i_accept_the_terms_of_the_uses_and_privacy_policy">I accept the terms of the uses and privacy policy</string>
+    <string name="profile_save">Save</string>
+    <string name="exporter">Exporter</string>
+    <string name="pincode">Pincode</string>
+    <string name="state">State</string>
+    <string name="dob_dd_mm_yyyy">DOB (DD/MM/YYYY)</string>
+    <string name="email_address">Email Address</string>
+    <string name="seller_name">Seller Name</string>
+    <string name="personal_information">Personal Information:</string>
+    <string name="landmark">Landmark</string>
+    <string name="search_address">Search Address</string>
+    <string name="alternative_contact_number_91">Alternative Contact Number (+91)</string>
+    <string name="website_url">Website Url</string>
+    <string name="company_til_no">Company TIL No.</string>
+    <string name="gst_no">GST No.</string>
+    <string name="kyc_information">KYC Information:</string>
+    <string name="brand_name">Brand Name</string>
+    <string name="name">Name</string>
+    <string name="news">News</string>
+    <string name="jewellery_updates">Jewellery Updates</string>
+    <string name="in_the_international_markets_gold_shed_over_1_per_cent_after_vaulting_above_the_1_600_level_for_the_first_time_in_nearly_seven_years_on_wednesday">In the international markets, gold shed over 1 per cent after vaulting above the $1,600 level for the first time in nearly seven years on Wednesday.</string>
+    <string name="bullion_counters_slipped_on_wednesday_after_tensions_in_west_asia_eased_following_reassuring_comments_from_us_president_donald_trump_this_helped_investors_to_seek_riskier_assets_trump_said_the_us_did_not_necessarily_have_to_respond_militarily_to_the_iranian_attacks_on_military_bases_housing_us_troops_in_iraq_overnight_he_said_no_americans_were">Bullion counters slipped on Wednesday after tensions in West Asia eased following reassuring comments from US President Donald Trump. This helped investors to seek riskier assets. Trump said the US did not necessarily have to respond militarily to the Iranian attacks on military bases housing US troops in Iraq overnight. He said no Americans were</string>
+    <string name="mjwel_is_india_s_leading_zero_fee_online_b2b_b2c_o2o_jewellery_market_place_bringing_together_manufacture_whole_seller_retailers_and_supporting_them_to_sell_their_product_globally">MJWEL is India\'s Leading ZERO FEE online B2B, B2C, O2O jewellery market place, bringing together Manufacture, Whole seller, Retailers and supporting them to sell their product globally.</string>
     <string-array name="country_array">
         <item>India</item>
         <item>China</item>
@@ -96,5 +130,8 @@
         <item>Madhya Pradesh</item>
         <item>Haryana</item>
         <item>Rajasthan</item>
+    </string-array>
+    <string-array name="business_type_array">
+        <item>Business Type</item>
     </string-array>
 </resources>

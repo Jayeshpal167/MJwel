@@ -36,5 +36,6 @@ dependencies {
     //Circular dots dependency
     implementation 'me.relex:circleindicator:1.2.2@aar'
     implementation 'org.jetbrains:annotations-java5:15.0'
-
+    //circular image view
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
 }

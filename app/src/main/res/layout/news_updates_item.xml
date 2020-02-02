@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/news_updates_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/new_sample"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/news_updates_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/in_the_international_markets_gold_shed_over_1_per_cent_after_vaulting_above_the_1_600_level_for_the_first_time_in_nearly_seven_years_on_wednesday"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/nav_text_color"
+        android:fontFamily="@font/opensansitalic" />
+
+    <TextView
+        android:id="@+id/news_updates_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/opensanssemibold"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:text="@string/bullion_counters_slipped_on_wednesday_after_tensions_in_west_asia_eased_following_reassuring_comments_from_us_president_donald_trump_this_helped_investors_to_seek_riskier_assets_trump_said_the_us_did_not_necessarily_have_to_respond_militarily_to_the_iranian_attacks_on_military_bases_housing_us_troops_in_iraq_overnight_he_said_no_americans_were" />
+
 
 </LinearLayout>

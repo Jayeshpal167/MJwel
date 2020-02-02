@@ -35,10 +35,6 @@ tools:showIn="navigation_view">
             android:icon="@drawable/my_enquiry"
             android:title="@string/my_enquiry" />
         <item
-            android:id="@+id/nav_account_setting"
-            android:icon="@drawable/account_setting"
-            android:title="@string/account_setting" />
-        <item
             android:id="@+id/nav_faq"
             android:icon="@drawable/faqs"
             android:title="@string/faqs" />
