@@ -1,267 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="16dp"
-    android:background="@color/white"
     android:layout_height="match_parent"
-    tools:context=".Fragments.ProfileFragment">
+    android:background="@color/white"
+    tools:context=".fragments.ProfileFragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/profileTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/opensansbold"
-            android:text="@string/my_account"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            />
-        <ImageView
-            android:padding="1dp"
-            android:id="@+id/profile_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/profile_image"
-            android:contentDescription="@string/profile_image"
-            android:src="@drawable/sample_image" />
-        <TextView
-            android:id="@+id/profile_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text=""
-            android:textSize="22sp"
-            android:fontFamily="@font/opensanssemibold"
-            android:textColor="@color/black"
-            android:gravity="center_horizontal"/>
-        <TextView
-            android:id="@+id/profile_phone_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text=""
-            android:textSize="16sp"
-            android:fontFamily="@font/opensanssemibold"
-            android:textColor="@color/black"
-            android:gravity="center_horizontal"/>
-        <TextView
-            android:id="@+id/profile_business_info_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/business_information"
-            android:textSize="16sp"
-            android:fontFamily="@font/opensanssemibold"
-            android:textColor="@color/black"/>
+
         <LinearLayout
-            android:id="@+id/profile_business_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
-            <EditText
-                android:id="@+id/profile_edit_name"
+            android:background="@drawable/profile_background_gradient"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profileTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/name"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_edit_brand_name"
+                android:paddingLeft="25dp"
+                android:fontFamily="@font/opensansbold"
+                android:text="@string/my_account"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:paddingStart="25dp"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/profile_image"
+                android:contentDescription="@string/profile_image"
+                android:padding="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sample_image" />
+
+            <TextView
+                android:id="@+id/profile_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/brand_name"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <Spinner
-                android:id="@+id/profile_edit_business_type"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:entries="@array/business_type_array"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"/>
-        </LinearLayout>
-        <TextView
-            android:id="@+id/profile_kyc_info_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/kyc_information"
-            android:textSize="16sp"
-            android:fontFamily="@font/opensanssemibold"
-            android:textColor="@color/black"/>
-        <LinearLayout
-            android:id="@+id/profile_kyc_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
-            <EditText
-                android:id="@+id/profile_gst_no"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/gst_no"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_company_til"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/company_til_no"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_website_url"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/website_url"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_alternative_contact_no"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/alternative_contact_number_91"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:inputType="number"
-                android:maxLength="10"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_search_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/search_address"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"/>
-            <EditText
-                android:id="@+id/profile_landmark"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/landmark"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"/>
-        </LinearLayout>
-        <TextView
-            android:id="@+id/profile_personal_information_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/personal_information"
-            android:textSize="16sp"
-            android:fontFamily="@font/opensanssemibold"
-            android:textColor="@color/black"/>
-        <LinearLayout
-            android:id="@+id/profile_personal_information"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="8dp">
-            <EditText
-                android:id="@+id/profile_seller_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/seller_name"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_edit_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/email_address"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:inputType="textEmailAddress"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_edit_mobile_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/mobile_number"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:maxLength="10"
-                android:inputType="number"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_edit_dob"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/dob_dd_mm_yyyy"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"
-                android:singleLine="true"/>
-            <EditText
-                android:id="@+id/profile_state"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/state"
-                android:singleLine="true"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"/>
-            <EditText
-                android:id="@+id/profile_pincode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:hint="@string/pincode"
-                android:inputType="number"
-                android:maxLength="6"
-                android:fontFamily="@font/opensansregular"
-                android:textSize="16sp"/>
-            <CheckBox
-                android:id="@+id/profile_exporter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/opensanssemibold"
-                android:text="@string/exporter" />
-            <CheckBox
-                android:id="@+id/profile_i_accept"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/profile_phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/opensanssemibold"
-                android:text="@string/i_accept_the_terms_of_the_uses_and_privacy_policy" />
+                android:gravity="center_horizontal"
+                android:text=""
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/profile_business_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:text="@string/business_information"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/profile_business_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/profile_edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/name"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_edit_brand_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/brand_name"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/profile_edit_business_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:entries="@array/business_type_array"
+                    android:fontFamily="@font/opensansregular"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profile_kyc_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:text="@string/kyc_information"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/profile_kyc_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/profile_gst_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/gst_no"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_company_til"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/company_til_no"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_website_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/website_url"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_alternative_contact_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/alternative_contact_number_91"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_search_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/search_address"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/landmark"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/profile_personal_information_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/opensanssemibold"
+                android:text="@string/personal_information"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/profile_personal_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/profile_seller_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/seller_name"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_edit_mobile_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_edit_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/dob_dd_mm_yyyy"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/state"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/profile_pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/opensansregular"
+                    android:hint="@string/pincode"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/profile_exporter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:text="@string/exporter"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/profile_i_accept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/opensanssemibold"
+                    android:text="@string/i_accept_the_terms_of_the_uses_and_privacy_policy"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/profile_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/common_gradient"
             android:text="@string/profile_save"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:background="@drawable/common_gradient" />
+            android:textColor="@color/white" />
 
-        </LinearLayout>
-</ScrollView>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

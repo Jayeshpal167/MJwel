@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
-import jwel.prime.com.mjwel.Activity.HomeActivity;
+import jwel.prime.com.mjwel.activities.HomeActivity;
 import jwel.prime.com.mjwel.R;
 
 public class ToolBarManagerHome {

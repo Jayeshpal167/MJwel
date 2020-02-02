@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_margin="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/productCard"
-    app:cardCornerRadius="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
     android:background="@color/white"
-    app:cardElevation="5dp"
+    android:layout_gravity="center_horizontal"
     android:elevation="8dp"
-    android:layout_height="wrap_content">
+    android:orientation="vertical"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    tools:targetApi="lollipop">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="8dp">
+
         <ImageView
             android:id="@+id/home_product_image"
             android:layout_width="223dp"
-            android:contentDescription="@string/product_image"
             android:layout_height="223dp"
-            android:src="@drawable/necklac_dummy"
+            android:contentDescription="@string/product_image"
             android:scaleType="fitCenter"
-            />
+            android:src="@drawable/necklac_dummy" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            >
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/home_product_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3.0"
                 android:layout_weight="1"
-                android:textSize="16sp"
+                android:drawableStart="@drawable/star"
                 android:drawableLeft="@drawable/star"
                 android:drawablePadding="5dp"
-                android:textColor="@color/category_text"
                 android:fontFamily="@font/opensansregular"
-                android:drawableStart="@drawable/star" />
+                android:text="3.0"
+                android:textColor="@color/category_text"
+                android:textSize="16sp" />
+
             <TextView
                 android:id="@+id/home_product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹ 12000"
-                android:gravity="right"
                 android:layout_weight="1"
-                android:textSize="16sp"
                 android:drawablePadding="5dp"
-                android:textColor="@color/category_text"
                 android:fontFamily="@font/opensansregular"
-                />
+                android:gravity="right"
+                android:text="₹ 12000"
+                android:textColor="@color/category_text"
+                android:textSize="16sp" />
 
         </LinearLayout>
+
         <TextView
             android:id="@+id/home_product_name"
             android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/opensansbold"
-            android:textColor="@color/category_text"
-            android:textSize="16sp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
+            android:fontFamily="@font/opensansbold"
             android:text="@string/name_of_jewellery"
-            android:layout_height="wrap_content" />
+            android:textColor="@color/category_text"
+            android:textSize="16sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

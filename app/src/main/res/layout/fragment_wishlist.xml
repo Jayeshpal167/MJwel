@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
-    tools:context=".Fragments.WishlistFragment">
+    tools:context=".fragments.WishlistFragment">
 
     <TextView
         android:id="@+id/wishlist_title"
