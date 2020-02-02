@@ -110,4 +110,10 @@ public class ProfileFragment extends BaseHomeFragment {
         mActivity.hideBackButton();
         ToolBarManagerHome.getInstance().setHeaderTitle("");
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        ToolBarManagerHome.getInstance().changeToolBarColor(ContextCompat.getColor(mActivity, R.color.white));
+    }
 }
