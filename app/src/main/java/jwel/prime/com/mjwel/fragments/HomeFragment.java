@@ -1,34 +1,31 @@
 package jwel.prime.com.mjwel.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.snackbar.Snackbar;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.activities.HomeActivity;
 import jwel.prime.com.mjwel.adapters.CategoryAdapter;
 import jwel.prime.com.mjwel.adapters.HomeProductsAdapter;
 import jwel.prime.com.mjwel.adapters.SaleOptionAdapter;
-import jwel.prime.com.mjwel.R;
 import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
 import jwel.prime.com.mjwel.model.Category;
 import jwel.prime.com.mjwel.model.Products;
 import jwel.prime.com.mjwel.model.SaleOption;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HomeFragment extends BaseHomeFragment {
 
-    private RecyclerView categoryRecycler, saleRecycler, productRecycler;
+    private RecyclerView categoryRecycler;
+    private RecyclerView saleRecycler;
+    private RecyclerView productRecycler;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -77,6 +74,7 @@ public class HomeFragment extends BaseHomeFragment {
         productRecycler = contentView.findViewById(R.id.products_recycler);
         productRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         productRecycler.setAdapter(new HomeProductsAdapter(mActivity, productsList));
+        categoryRecycler.requestFocus();
         return contentView;
     }
 

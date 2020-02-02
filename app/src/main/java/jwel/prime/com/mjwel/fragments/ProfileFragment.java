@@ -1,9 +1,9 @@
 package jwel.prime.com.mjwel.fragments;
 
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
@@ -26,22 +26,32 @@ import jwel.prime.com.mjwel.constant.ToolBarManagerHome;
  */
 public class ProfileFragment extends BaseHomeFragment {
 
-
     public ProfileFragment() {
         // Required empty public constructor
     }
+
     private TextView profileName, profilePhoneNumber;
     private View contentView;
     private ImageView profileImage;
-    private EditText profileEditName, profileEditBrandName, profileGstNo, profileCompanyTil,
-            profileWebsiteUrl, profileAlternativContactNumber, profileSearchAddress,
-            profileLandmark, profileSellerName, profileEditEmail, profileEditMobileNumber,
-            profileEditDOB, profileState, profilePincode;
+    private EditText profileEditName;
+    private EditText profileEditBrandName;
+    private EditText profileGstNo;
+    private EditText profileCompanyTil;
+    private EditText profileWebsiteUrl;
+    private EditText profileAlternativContactNumber;
+    private EditText profileSearchAddress;
+    private EditText profileLandmark;
+    private EditText profileSellerName;
+    private EditText profileEditEmail;
+    private EditText profileEditMobileNumber;
+    private EditText profileEditDOB;
+    private EditText profileState;
+    private EditText profilePincode;
     private Spinner profileEditBusinessType;
     private CheckBox porfileExporter, profileAcceptTnc;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         contentView = inflater.inflate(R.layout.fragment_profile, container, false);
         profileName = contentView.findViewById(R.id.profile_name);
         profilePhoneNumber = contentView.findViewById(R.id.profile_phone_number);
@@ -65,23 +75,25 @@ public class ProfileFragment extends BaseHomeFragment {
         profileAcceptTnc = contentView.findViewById(R.id.profile_i_accept);
         //to set the current profile value at above header
         setProfileOfUser("Shubham Kumar", "9458XXXXXX");
-        return  contentView;
+        ToolBarManagerHome.getInstance().changeToolBarColor(ContextCompat.getColor(mActivity, R.color.profileToolBarTopColor));
+        return contentView;
     }
 
     @SuppressLint("SetTextI18n")
     private void setProfileOfUser(String userName, String userPhoneNumber) {
         profileName.setText(userName);
-        profilePhoneNumber.setText("+91 "+userPhoneNumber);
+        profilePhoneNumber.setText("+91 " + userPhoneNumber);
     }
 
     private boolean doubleBackPress = false;
+
     @Override
     public void onBackPressed() {
-        if(doubleBackPress){
+        if (doubleBackPress) {
             super.onBackPressedToExit(this);
             return;
         }
-        Snackbar.make(contentView,"Press the back button again to Exit!!!", Snackbar.LENGTH_LONG).show();
+        Snackbar.make(contentView, "Press the back button again to Exit!!!", Snackbar.LENGTH_LONG).show();
         doubleBackPress = true;
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -90,6 +102,7 @@ public class ProfileFragment extends BaseHomeFragment {
             }
         }, 1500);
     }
+
     @Override
     public void onStart() {
         super.onStart();

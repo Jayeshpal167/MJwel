@@ -12,6 +12,7 @@
     <color name="tint_grey">#F6F6F6</color>
     <color name="category_text">#484848</color>
     <color name="category_inactive_text">#B8B8B8</color>
-    <color name="buttonGradientone">#E18F37</color>
-    <color name="buttonGradienttwo">#983400</color>
+    <color name="buttonGradientOne">#E18F37</color>
+    <color name="buttonGradientTwo">#983400</color>
+    <color name="profileToolBarTopColor">#FECB38</color>
 </resources>
